@@ -40,7 +40,7 @@ $input_phone_required = $params->get('input_phone_required');
 
 
 <?php
-    if($_POST["cmbf-phone-".$id_module]) {
+    if(isset($_POST["cmbf-phone-".$id_module])) {
 
         $cmbf_phone = $_POST["cmbf-phone-".$id_module];
         $cmbf_name = $_POST["cmbf-name-".$id_module];
