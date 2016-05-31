@@ -1,0 +1,388 @@
+ /*
+    # ------------------------------------------------------------------------
+    # Extensions for Joomla 3.x
+    # ------------------------------------------------------------------------
+    # Copyright (C) 2015 standardcompany.ru. All Rights Reserved.
+    # @license - PHP files are GNU/GPL V2.
+    # Author: standardcompany.ru
+    # Websites:  http://standardcompany.ru
+    # Date modified: 11/10/2015
+    # ------------------------------------------------------------------------
+    */
+
+.cmbf-form-class {
+  width: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 9999;
+}
+.cmbf-form-class::before,
+.cmbf-form-class::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cmbf-form-class fieldset {
+  margin: 24px 0 30px;
+  padding: 0 1.5em;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.cmbf-form-inline .cmbf-form-class fieldset
+{
+  padding: 0;
+}
+
+.cmbf-form-inline
+{
+    z-index: 9;
+    position: relative;
+}
+.cmbf-form-class legend {
+  padding-bottom: 15px;
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 1.4;
+  border-bottom: 1px solid #ecf0f1;
+  color: #363b4a;
+}
+
+.cmbf-form-class legend span {
+  display: block;
+  font-size: 14px;
+  color: #7f7f7d;
+  line-height: 1.4;
+}
+
+.cmbf-form-class .cmbf-icon {
+  position: relative;
+}
+
+.cmbf-form-class .cmbf-field-container {
+  position: relative;
+  margin: 10px 0;
+}
+
+.cmbf-form-class .cd-label {
+  display: block;
+}
+
+.cmbf-form-class input[type="text"],
+.cmbf-form-class legend {
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+}
+.cmbf-form-class input[type="text"] {
+  /* general style for input elements */
+  padding: 14px 12px 14px 45px;
+  border: 1px solid #cfd9db;
+  background-color: #ffffff;
+  border-radius: .25em;
+  box-shadow: none;
+  color: #808080;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  height: 48px;
+  font-weight: 400;
+  -webkit-transition: border 0.2s ease-in-out;
+transition: border 0.2s ease-in-out;
+}
+
+.cmbf-form-class input[type="text"]:focus {
+  outline: none;
+  border-color: #2c97de;
+  box-shadow: none;
+}
+
+.cmbf-form-class .cmbf-icon svg {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  width: 21px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.cmbf-form-class .cmbf-error {
+  white-space: nowrap;
+  line-height: 48px;
+  width: auto;
+  height: 48px;
+  background: #f16767;
+  color: white;
+  letter-spacing: .2px;
+  font-size: 70%;
+  font-weight: 100;
+  font-family: Arial, sans-serif;
+  padding: 0 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-top-right-radius: .25em;
+  border-bottom-right-radius: .25em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  min-width: 120px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+@media (min-width: 62em) {
+  .cmbf-form-class .cmbf-error {
+    padding: 0 10px;
+    font-size: 100%;
+    font-size: 77%;
+    min-width: 130px;
+  }
+}
+
+.cmbf-form-class .valid-error .cmbf-error {
+  opacity: 1;
+}
+
+
+.cmbf-form-class .valid-error input[type="text"] {
+  border-color: #f16767;
+}
+
+.cmbf-form-class input:focus:invalid:focus
+{
+    border-color: none;
+    box-shadow: none;
+}
+
+.cmbf-form-class .button
+{
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  position: relative;
+  border: none;
+  border-radius: .25em;
+  background: #42a2e1;
+  color: #ffffff;
+  letter-spacing: .5px;
+  font-size: 14px;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+}
+
+.cmbf-form-class .button:hover
+{
+  opacity: .9
+}
+
+.cmbf-form-modal {
+  position: fixed;
+  width: 100%;
+  max-width: 390px;
+  right: 0;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  border-radius: .25em;
+  border: 1px solid #ecf0f1;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  margin: 0 auto;
+  z-index: 9999;
+  display: none;
+}
+
+.cmbf-form-modal .cmbf-form-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  /* replace text with background images */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 99999
+}
+
+.cmbf-form-modal .cmbf-form-close:before,
+.cmbf-form-modal .cmbf-form-close:after
+{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 2px;
+  width: 16px;
+  border-radius: 4em;
+  background-color: #cbccc8;
+  /* Force Hardware Acceleration */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.cmbf-form-modal .cmbf-form-close:before {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  -o-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+
+.cmbf-form-modal .cmbf-form-close:after {
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -o-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.cmbf-button-container {
+  outline: none;
+  height: 48px;
+  line-height: 40px;
+  text-align: center;
+  padding: 0px 40px;
+  border-radius: .5em;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  border: 1px solid #1ECD97;
+  background:  #1ECD97;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 -1px 0 1px rgba(0, 0, 0, 0.05), inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+  text-shadow: 0;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease;
+      transition: all 0.25s ease;
+}
+
+.cmbf-button-fixed-right-vertical {
+  position: fixed;
+  z-index: 999;
+  top: calc(50% + 46px);
+  right: 0;
+  transform: rotate(90deg) translateX(30%);
+
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.cmbf-button-fixed-left-vertical
+{
+  position: fixed;
+  z-index: 999;
+  top: calc(50% + 46px);
+  left: 0;
+  transform: rotate(-90deg) translateX(-30%);
+
+
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+
+  /*margin-right: 46px;*/
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.cmbf-button-fixed-bottom-left
+{
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 2.5%;
+
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.cmbf-button-fixed-bottom-right
+{
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  right: 2.5%;
+
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+
+.cmbf-button-container:hover
+{
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 -1px 0 1px rgba(0, 0, 0, 0.2), inset 0 -10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cmbf-obfuscator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(to top, rgba(0, 0, 20, 0.85) 0%, rgba(0, 0, 10, 0.95) 100%) repeat scroll 0% 0% transparent !important;
+  z-index: 1000;
+  margin-top: 0px;
+  display: none; 
+}
+
+.cmbf-form-pop-up {
+  position: relative;
+  top: 50%;
+  max-width: 500px;
+  max-height: 85%;
+  margin: auto;
+  z-index: 2002;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+
+.cmbf-success
+{
+    display: none;
+    line-height: 1.7;
+    color: #2ea341;
+    font-weight: bold;
+    
+}

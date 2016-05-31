@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.6"
+	client="site"
+	method="upgrade">
+	<name>Call Me Back Form</name>
+	<author>Standard Company</author>
+	<creationDate>11/10/2015</creationDate>
+	<copyright>Copyright (C) 2015 standardcompany.ru. All Rights Reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>info@standardcompany.ru</authorEmail>
+	<authoralt>http://standardcompany.ru</authoralt>
+	<version>1.0</version>
+	<description>Call Me Back Form - Copyright (C) 2015 standardcompany.ru. All Rights Reserved.</description>
+
+    <updateservers>
+		<server type="extension" priority="1" name="Call Me Back Form">
+			http://standardcompany.ru/dwn/user-update-call-me-form.xml
+		</server>
+	</updateservers>
+	
+	<files>	
+		<filename module="mod_call_me_back_form">mod_call_me_back_form.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_call_me_back_form.php</filename>
+		<filename>mod_call_me_back_form.xml</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>   
+    </files>
+
+    <languages>
+		<language tag="ru-RU">ru-RU.mod_call_me_back_form.ini</language>
+		<language tag="ru-RU">ru-RU.mod_call_me_back_form.sys.ini</language>
+		<language tag="en-GB">en-GB.mod_call_me_back_form.ini</language>
+		<language tag="en-GB">en-GB.mod_call_me_back_form.sys.ini</language>
+	</languages>
+
+<config>
+	<fields name="params">
+    	<fieldset name="basic">
+			<field name="my_email" type="email"
+				label="JGLOBAL_EMAIL"
+				description="COM_ADMIN_USER_FIELD_EMAIL_DESC"
+				required="true"
+				size="30"
+				class="inputbox"
+				validate="email" />
+
+			<field name="subject_mail" type="text" translate_default="true" default="CALL_ME_BACK_FORM_SUBJECT_DEFAULT" label="CALL_ME_BACK_FORM_SUBJECT" size="10" />
+
+			<field name="use_as" type="list" default="button" label="CALL_ME_BACK_FORM_USE_AS" description="">
+				<option value="button">CALL_ME_BACK_FORM_USE_AS_BUTTON</option>
+				<option value="button-fixed-right-vertical">CALL_ME_BACK_FORM_USE_AS_BUTTON_FRS</option>
+				<option value="button-fixed-left-vertical">CALL_ME_BACK_FORM_USE_AS_BUTTON_FLS</option>
+				<option value="button-fixed-bottom-left">CALL_ME_BACK_FORM_USE_AS_BUTTON_FBL</option>
+				<option value="button-fixed-bottom-right">CALL_ME_BACK_FORM_USE_AS_BUTTON_FBR</option>
+				<option value="inline-form">CALL_ME_BACK_FORM_USE_AS_INLINE</option>
+			</field>
+
+			<field name="button_name" type="text" translate_default="true" default="CALL_ME_BACK_FORM_NAME_BUTTON_DEFAULT" label="CALL_ME_BACK_FORM_NAME_BUTTON" size="10" />
+			<field name="form_title" type="text" translate_default="true" default="CALL_ME_BACK_FORM_TITLE_DEFAULT" label="CALL_ME_BACK_FORM_TITLE" size="10" />
+			<field name="form_description" type="textarea" translate_default="true" default="CALL_ME_BACK_FORM_DESCRIPTION_DEFAULT" label="CALL_ME_BACK_FORM_DESCRIPTION" rows="5" cols="5" filter="raw"/>
+			<field name="form_thanks" type="textarea" translate_default="true" default="CALL_ME_BACK_FORM_AFTER_SENDING_DEFAULT" label="CALL_ME_BACK_FORM_AFTER_SENDING" rows="5" cols="5" filter="raw"/>
+
+				<field name="note_1" type="note" class="alert alert-info" label="CALL_ME_BACK_FORM_DESCRIPTION_NAME_FIELDS" />
+				<field name="input_name" type="text" translate_default="true" default="CALL_ME_BACK_FORM_INPUT_NAME_DEFAULT" label="CALL_ME_BACK_FORM_INPUT_NAME" size="10" />
+				<field name="input_phone" type="text" translate_default="true" default="CALL_ME_BACK_FORM_INPUT_PHONE_DEFAULT" label="CALL_ME_BACK_FORM_INPUT_PHONE" size="10" />
+				<field name="phone_mask" type="text" description="CALL_ME_BACK_FORM_MASK_DESC" default="+7 (999) 999-99-99" label="CALL_ME_BACK_FORM_MASK" size="10" />
+				<field name="send_button" type="text" translate_default="true" default="CALL_ME_BACK_FORM_SEND_BUTTON_DEFAULT" label="CALL_ME_BACK_FORM_SEND_BUTTON" size="10" />
+				<field name="send_button_after" type="text" translate_default="true" default="CALL_ME_BACK_FORM_SEND_BUTTON_AFTER_DEFAULT" label="CALL_ME_BACK_FORM_SEND_BUTTON_AFTER" size="10" />
+
+			<field name="note_2" type="note" class="alert alert-info" label="CALL_ME_BACK_FORM_ERRORS" />
+			<field name="input_name_required" type="text" translate_default="true" default="CALL_ME_BACK_FORM_INPUT_NAME_REQUIRED_DEFAULT" label="CALL_ME_BACK_FORM_INPUT_NAME_REQUIRED" size="10" />
+			<field name="input_phone_required" type="text" translate_default="true" default="CALL_ME_BACK_FORM_INPUT_PHONE_REQUIRED_DEFAULT" label="CALL_ME_BACK_FORM_INPUT_PHONE_REQUIRED" size="10" />
+
+	    </fieldset>
+	</fields>
+</config>
+
+</extension>
+
